@@ -1,0 +1,13 @@
+include vars
+
+output * bg "cachorro.jpg" center $mantle
+
+gaps inner 10
+
+font "Mononoki Nerd Font" 11
+
+default_border pixel 2
+client.focused $blue $base $text $yellow $blue
+client.focused_inactive $clear $base $text $clear $clear
+client.unfocused $clear $base $text $clear $clear
+client.urgent $red $base $text $pink $red

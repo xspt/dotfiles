@@ -1,0 +1,72 @@
+@import "mocha.css";
+
+* {
+    font-family: Cousine Nerd Font, monospace;
+    font-size: 13px;
+}
+
+window#waybar {
+    padding: 0px;
+    background-color: transparent;
+    color: @text;
+}
+
+.modules-left {
+    background-color: @text;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    transition: none;
+    padding: 0px;
+    color: @base;
+}
+
+#workspaces button.focused {
+    color: @base;
+}
+
+#workspaces button.persistent {
+    color: @subtext0;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+.modules-center {
+    border-radius: 10px;
+    background-color: @surface0;
+    padding: 0 5px;
+}
+
+#custom-prev, #custom-next {
+   font-size: 15px;
+   color: @blue;
+   padding: 0 5px;
+}
+
+.modules-right {
+    border-radius: 10px;
+    background-color: @surface0;
+    padding: 0 5px;
+}
+
+#pulseaudio {
+    padding: 0 5px;
+    color: @green;
+}
+
+#pulseaudio.muted {
+    color: @red;
+}
+
+#custom-weather {
+    padding: 0 5px;
+    color: @yellow;
+}
+
+#clock {
+    padding: 0 5px;
+    color: @mauve;
+}

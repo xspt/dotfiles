@@ -1,0 +1,66 @@
+{
+    "sway/workspaces": {
+	"disable-scroll-wraparound": true,
+	"all-outputs": false,
+        "format": "{icon}",
+	"format-icons": {
+	    "urgent": "",
+	    "focused": "",
+	    "default": "",
+	    "persistent": "",
+	},
+	"persistent_workspaces": {
+  	    "1a": ["HDMI-A-1"],
+	    "2a": ["HDMI-A-1"],
+	    "3a": ["HDMI-A-1"],
+	    "4a": ["HDMI-A-1"],
+	    "1b": ["VGA-1"],
+	    "2b": ["VGA-1"],
+	    "3b": ["VGA-1"],
+	    "4b": ["VGA-1"],
+	},
+    },
+
+    "custom/prev": {
+        "tooltip": false,
+        "on-click": "playerctl -p firefox previous",
+	"format": "󰒮",
+    },
+
+    "custom/playerctl": {
+	"exec": "~/.config/waybar/scripts/scroll.sh",
+	"tooltip": false,
+	"on-click": "playerctl -p firefox play-pause",
+	"format": " {}",
+    },
+
+    "custom/next": {
+	"tooltip": false,
+	"on-click": "playerctl -p firefox next",
+	"format": "󰒭",
+    },
+
+    "pulseaudio": {
+	"tooltip": false,
+	"scroll-step": 2.0,
+	"on-click": "amixer set Master toggle",
+	"format-muted": "󰝟 muted",
+        "format": "{icon} {volume}%",
+	"format-icons": {
+	    "default": ["󰕿", "󰖀", "󰕾"],
+	},
+    },
+
+    "clock": {
+        "tooltip": false,
+	"format": "󰅐 {:%H:%M}",
+	"format-alt": "󰃭 {:%a, %d de %b}",
+    },
+
+    "custom/weather": {
+	"tooltip": false,
+	"format": "󰖕 {}°C",
+	"interval": 900,
+	"exec": "curl 'https://api.open-meteo.com/v1/forecast?latitude=-25.5185&longitude=-49.2555&current_weather=true&timezone=America%2FSao_Paulo' | jq .'current_weather'.'temperature'",
+    },
+}
