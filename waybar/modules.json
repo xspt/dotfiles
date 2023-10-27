@@ -23,20 +23,20 @@
 
     "custom/prev": {
         "tooltip": false,
-        "on-click": "playerctl -p firefox previous",
+        "on-click": "playerctl -p spotify previous",
 	"format": "󰒮",
     },
 
     "custom/playerctl": {
 	"exec": "~/.config/waybar/scripts/scroll.sh",
 	"tooltip": false,
-	"on-click": "playerctl -p firefox play-pause",
-	"format": " {}",
+	"on-click": "playerctl -p spotify play-pause",
+	"format": "{}",
     },
 
     "custom/next": {
 	"tooltip": false,
-	"on-click": "playerctl -p firefox next",
+	"on-click": "playerctl -p spotify next",
 	"format": "󰒭",
     },
 

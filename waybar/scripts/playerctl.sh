@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PLAYER="firefox"
+PLAYER="spotify"
 
 FORMAT="{{artist}} - {{title}}"
 
@@ -23,7 +23,7 @@ else
 	elif [ "$STATUS" = "No player running"  ]; then
 		echo "$STATUS"
 	else
-		music=$(playerctl --player=$PLAYER metadata --format "$FORMAT ")
+		music=$(playerctl --player=$PLAYER metadata --format "$FORMAT")
 		if [[ "$music" == *"&"* ]]; then
 			echo "${music//&/and}"
 		else

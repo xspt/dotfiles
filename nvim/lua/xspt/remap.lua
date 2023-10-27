@@ -15,7 +15,7 @@ keyset("n", "<C-u>", "<C-u>zz")
 keyset("n", "n", "nzzzv")
 keyset("n", "N", "Nzzzv")
 
--- overwrite paste
+-- paste without writing the overwrited text to the register
 keyset("x", "<leader><C-p>", "\"_dP")
 
 -- yank to system clipboard
@@ -23,14 +23,14 @@ keyset("n", "<leader>y", "\"+y")
 keyset("v", "<leader>y", "\"+y")
 keyset("n", "<leader>Y", "\"+Y")
 
--- delete to void
+-- delete to void (without writing to the register)
 keyset("n", "<leader>d", "\"_d")
 keyset("v", "<leader>d", "\"_d")
 
 -- disables Q default bind
 keyset("n", "Q", "<nop>")
 
--- replace word in whole document
+-- substitute in whole document
 keyset("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- chmod +x current file
@@ -52,9 +52,10 @@ keyset("n", "<A-l>", ":vertical resize +2<CR>")
 keyset("v", ">", ">gv")
 keyset("v", "<", "<gv")
 
--- netrw on left
+-- file tree toggling
 keyset("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- buffers
 keyset("n", "<S-h>", ":bp<CR>")
 keyset("n", "<S-l>", ":bn<CR>")
+keyset("n", "<S-w>", ":bd<CR>")
