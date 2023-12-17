@@ -7,7 +7,7 @@ set $swlock $swaylock
 output $monitor1 resolution 1366x768 position 0,0
 output $monitor2 resolution 1280x720 position 0,768
 
-exec swayidle -w timeout 600 '$swlock' timeout 602 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
+exec swayidle -w timeout 600 '$swlock' timeout 602 'swaymsg "output * power off"' timeout 700 'systemctl suspend' resume 'swaymsg "output * power on"'
 
 bar swaybar_command waybar
 
