@@ -1,6 +1,6 @@
 include vars
 
-output * bg "cachorro.jpg" center $mantle
+output * bg $mantle solid_color
 
 gaps inner 10
 
