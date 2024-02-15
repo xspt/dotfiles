@@ -38,10 +38,10 @@ keyset("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keyset("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- window navigation
-keyset("n", "<C-h>", "<C-w>h")
-keyset("n", "<C-j>", "<C-w>j")
-keyset("n", "<C-k>", "<C-w>k")
-keyset("n", "<C-l>", "<C-w>l")
+-- keyset("n", "<C-h>", "<C-w>h")
+-- keyset("n", "<C-j>", "<C-w>j")
+-- keyset("n", "<C-k>", "<C-w>k")
+-- keyset("n", "<C-l>", "<C-w>l")
 
 -- window resizing
 keyset("n", "<A-h>", ":vertical resize -2<CR>")
@@ -57,6 +57,6 @@ keyset("v", "<", "<gv")
 keyset("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- buffers
-keyset("n", "<leader><C-h>", ":bp<CR>")
-keyset("n", "<leader><C-l>", ":bn<CR>")
-keyset("n", "<leader><C-w>", ":bd<CR>")
+keyset("n", "<leader><S-h>", ":bp<CR>")
+keyset("n", "<leader><S-l>", ":bn<CR>")
+keyset("n", "<leader><S-w>", ":bd<CR>")
