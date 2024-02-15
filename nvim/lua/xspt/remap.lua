@@ -29,6 +29,7 @@ keyset("v", "<leader>d", "\"_d")
 
 -- disables Q default bind
 keyset("n", "Q", "<nop>")
+keyset("n", "q", "<nop>")
 
 -- substitute in whole document
 keyset("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -56,6 +57,6 @@ keyset("v", "<", "<gv")
 keyset("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- buffers
-keyset("n", "<S-h>", ":bp<CR>")
-keyset("n", "<S-l>", ":bn<CR>")
-keyset("n", "<S-w>", ":bd<CR>")
+keyset("n", "<leader><C-h>", ":bp<CR>")
+keyset("n", "<leader><C-l>", ":bn<CR>")
+keyset("n", "<leader><C-w>", ":bd<CR>")
