@@ -89,6 +89,12 @@ return packer.startup(function(use)
          require("nvim-ts-autotag").setup()
       end
    })
+   use {
+      'numToStr/Comment.nvim',
+      config = function()
+         require('Comment').setup()
+      end
+   }
    -- Automatically set up your configuration after cloning packer.nvim
    -- Put this at the end after all plugins
    if PACKER_BOOTSTRAP then
