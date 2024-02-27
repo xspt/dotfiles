@@ -37,7 +37,6 @@ set $term kitty
 
 set $menu tofi-run | xargs swaymsg exec --
 set $swaylock swaylock -f -c "$base"
-set $grimshot /usr/share/sway/scripts/grimshot
 
 set $monitor1 HDMI-A-1
 set $monitor2 VGA-1

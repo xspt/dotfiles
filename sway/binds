@@ -27,13 +27,13 @@ bindsym $mod+Shift+$right move right
 bindsym $mod+Shift+s exec slurp | grim -g - - | wl-copy --type image/png
 
 # current window
-bindsym Alt+Print exec $grimshot copy active
+bindsym Alt+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - - | wl-copy --type image/png
 
 # all screens
-bindsym $mod+Print exec $grimshot copy screen
+bindsym $mod+Print exec grim - | wl-copy --type image/png
 
 # active screen
-bindsym $mod+Alt+Print exec $grimshot copy output
+bindsym $mod+Alt+Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy --type image/png
 
 floating_modifier $mod normal
 
