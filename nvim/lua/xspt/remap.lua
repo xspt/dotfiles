@@ -60,3 +60,6 @@ keyset("n", "<leader>e", ":NvimTreeToggle<CR>")
 keyset("n", "<leader><S-h>", ":bp<CR>")
 keyset("n", "<leader><S-l>", ":bn<CR>")
 keyset("n", "<leader><S-w>", ":bd<CR>")
+
+-- terminal
+keyset("t", "<Esc>", "<C-\\><C-n>")
