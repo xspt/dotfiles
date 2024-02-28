@@ -18,7 +18,8 @@ local plugins = {
    {
       'kylechui/nvim-surround',
       version = '*',
-      event = 'VeryLazy'
+      event = 'VeryLazy',
+      config = true
    },
    {
       'nvim-telescope/telescope.nvim', tag = '0.1.5',
