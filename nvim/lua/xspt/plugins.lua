@@ -26,22 +26,17 @@ local plugins = {
       dependencies = { 'nvim-lua/plenary.nvim' }
    },
    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-   {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v2.x',
-      dependencies = {
-         {'neovim/nvim-lspconfig'},             -- Required
-         {'williamboman/mason.nvim'},           -- Optional
-         {'williamboman/mason-lspconfig.nvim'}, -- Optional
-         {'hrsh7th/nvim-cmp'},     -- Required
-         {'hrsh7th/cmp-nvim-lsp'}, -- Required
-         {'L3MON4D3/LuaSnip'},     -- Required
-      }
-   },
    { 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons' } },
    { 'akinsho/bufferline.nvim', version = '*', dependencies = { 'nvim-tree/nvim-web-devicons' } },
    { 'windwp/nvim-ts-autotag', config = true },
-   { 'numToStr/Comment.nvim', config = true }
+   { 'numToStr/Comment.nvim', config = true },
+   -- LSP
+   'neovim/nvim-lspconfig',
+   'williamboman/mason.nvim',
+   'williamboman/mason-lspconfig.nvim',
+   'hrsh7th/nvim-cmp',
+   'hrsh7th/cmp-nvim-lsp',
+   'L3MON4D3/LuaSnip',
 }
 
 require("lazy").setup(plugins, opts)
