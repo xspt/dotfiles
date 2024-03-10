@@ -43,6 +43,10 @@ require('mason-lspconfig').setup({
                         fileMatch = {"tsconfig*.json"},
                         url = "https://json.schemastore.org/tsconfig.json"
                      },
+                     {
+                        fileMatch = {"package.json"},
+                        url = "https://json.schemastore.org/package.json"
+                     },
                   },
                },
             },
