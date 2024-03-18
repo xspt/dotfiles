@@ -30,6 +30,10 @@ local plugins = {
    { 'akinsho/bufferline.nvim', version = '*', dependencies = { 'nvim-tree/nvim-web-devicons' } },
    { 'windwp/nvim-ts-autotag', config = true },
    { 'numToStr/Comment.nvim', config = true },
+   {
+      'nvim-lualine/lualine.nvim',
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
+   },
    -- LSP
    'neovim/nvim-lspconfig',
    'williamboman/mason.nvim',
