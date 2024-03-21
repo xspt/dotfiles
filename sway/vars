@@ -33,7 +33,7 @@ set $down j
 set $up k
 set $right l
 
-set $term kitty
+set $term alacritty
 
 set $menu tofi-run | xargs swaymsg exec --
 set $swaylock swaylock -f -c "$base"
