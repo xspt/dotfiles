@@ -1,6 +1,6 @@
 include vars
 
-bindsym $mod+d exec $swaylock
+bindsym $mod+d exec swaylock -f
 
 bindsym $mod+Return exec $term
 bindsym $mod+Space exec $menu
