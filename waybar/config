@@ -1,20 +1,20 @@
 {
-    "margin": "10px 10px 0",
-    "layer": "top",
-    "include": [
-        "~/.config/waybar/modules.json"
-    ],
-    "modules-left": [
-        "sway/workspaces",
-    ],
-    "modules-center": [
-	"custom/prev",
-	"custom/playerctl",
-	"custom/next",
-    ],
-    "modules-right": [
-        "pulseaudio",
-	"custom/weather",
-	"clock",
-    ],
+   "margin": "10px 10px 0",
+   "layer": "top",
+   "include": [
+      "~/.config/waybar/modules.json"
+   ],
+   "modules-left": [
+      "sway/workspaces",
+   ],
+   "modules-center": [
+      "custom/prev",
+      "custom/playerctl",
+      "custom/next",
+   ],
+   "modules-right": [
+      "pulseaudio",
+      "custom/weather",
+      "clock",
+   ],
 }
