@@ -19,19 +19,11 @@ window#waybar {
 #workspaces button {
     transition: none;
     padding: 0px;
-    color: @base;
+    color: @subtext0;
 }
 
 #workspaces button.focused {
     color: @base;
-}
-
-#workspaces button.persistent {
-    color: @subtext0;
-}
-
-#workspaces button.urgent {
-    color: @red;
 }
 
 .modules-center {

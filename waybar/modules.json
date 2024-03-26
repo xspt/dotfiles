@@ -5,9 +5,7 @@
       "format": "{icon}",
       "format-icons": {
          "urgent": "",
-         "focused": "",
-         "default": "",
-         "persistent": "",
+         "default": "",
       },
       "persistent-workspaces": {
          "1a": ["HDMI-A-1"],
