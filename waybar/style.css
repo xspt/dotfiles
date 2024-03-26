@@ -44,6 +44,11 @@ window#waybar {
     padding: 0 5px;
 }
 
+#privacy {
+   padding: 0 5px;
+   color: @blue;
+}
+
 #pulseaudio {
     padding: 0 5px;
     color: @green;

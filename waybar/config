@@ -13,6 +13,7 @@
       "custom/next",
    ],
    "modules-right": [
+      "privacy",
       "pulseaudio",
       "custom/weather",
       "clock",
