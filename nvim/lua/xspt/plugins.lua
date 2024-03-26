@@ -14,7 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
    'nvim-lua/popup.nvim',
    'nvim-lua/plenary.nvim',
-   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+   -- { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+   { "folke/tokyonight.nvim", lazy = false, priority = 1000 },
    {
       'kylechui/nvim-surround',
       version = '*',
