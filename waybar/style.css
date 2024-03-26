@@ -1,4 +1,4 @@
-@import "mocha.css";
+@import "/home/xspt/.cache/wal/waybar.css";
 
 * {
     font-family: Cousine Nerd Font, monospace;
@@ -8,62 +8,62 @@
 window#waybar {
     padding: 0px;
     background-color: transparent;
-    color: @text;
+    color: @foreground;
 }
 
 .modules-left {
-    background-color: @text;
+    background-color: @foreground;
     border-radius: 10px;
 }
 
 #workspaces button {
     transition: none;
     padding: 0px;
-    color: @subtext0;
+    color: @color7;
 }
 
 #workspaces button.focused {
-    color: @base;
+    color: @background;
 }
 
 .modules-center {
     border-radius: 10px;
-    background-color: @surface0;
+    background-color: @color8;
     padding: 0 5px;
 }
 
 #custom-prev, #custom-next {
    font-size: 15px;
-   color: @blue;
+   color: @color4;
    padding: 0 5px;
 }
 
 .modules-right {
     border-radius: 10px;
-    background-color: @surface0;
+    background-color: @color8;
     padding: 0 5px;
 }
 
 #privacy {
    padding: 0 5px;
-   color: @blue;
+   color: @color4;
 }
 
 #pulseaudio {
     padding: 0 5px;
-    color: @green;
+    color: @color2;
 }
 
 #pulseaudio.muted {
-    color: @red;
+    color: @color1;
 }
 
 #custom-weather {
     padding: 0 5px;
-    color: @yellow;
+    color: @color3;
 }
 
 #clock {
     padding: 0 5px;
-    color: @mauve;
+    color: @color5;
 }
