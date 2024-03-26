@@ -1,13 +1,13 @@
-include vars
+include "$HOME/.cache/wal/colors-sway"
 
-output * bg $mantle solid_color
+output * bg $background solid_color
 
 gaps inner 10
 
 font "Mononoki Nerd Font" 11
 
 default_border pixel 2
-client.focused $blue $base $text $yellow $blue
-client.focused_inactive $clear $base $text $clear $clear
-client.unfocused $clear $base $text $clear $clear
-client.urgent $red $base $text $pink $red
+client.focused $color4 $background $foreground $color3 $color4
+client.focused_inactive #ffffff00 $background $foreground #ffffff00 #ffffff00
+client.unfocused #ffffff00 $background $foreground #ffffff00 #ffffff00
+client.urgent $color1 $background $foreground $color5 $color1
