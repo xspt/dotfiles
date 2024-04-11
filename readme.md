@@ -13,4 +13,4 @@ This script will create symbolic links to your `~/.config` directory (except for
 
 ## images
 
-![neovim](https://ibb.co/vdRhrPF)
+![neovim](https://i.ibb.co/Jpgqb71/Sem-t-tulo.png)
