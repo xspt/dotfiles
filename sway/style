@@ -2,7 +2,8 @@ include "$HOME/.cache/wal/colors-sway"
 
 output * bg $background solid_color
 
-gaps inner 10
+gaps inner 0
+gaps outer 10
 
 font "Mononoki Nerd Font" 11
 
