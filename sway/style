@@ -7,7 +7,7 @@ gaps outer 10
 
 font "Mononoki Nerd Font" 11
 
-default_border pixel 2
+default_border pixel 1
 client.focused $color4 $background $foreground $color3 $color4
 client.focused_inactive #ffffff00 $background $foreground #ffffff00 #ffffff00
 client.unfocused #ffffff00 $background $foreground #ffffff00 #ffffff00
