@@ -76,7 +76,8 @@
    "clock": {
       "tooltip": false,
       "format": "󰅐 {:%H:%M}",
-      "format-alt": "󰃭 {:%a, %d de %b}",
+      "format-alt": "󰃭 {:L%a, %d de %b}",
+      "locale": "pt_BR.UTF-8",
    },
 
    "custom/weather": {
