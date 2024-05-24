@@ -6,10 +6,8 @@ case "$(echo -e "󰐥 Desligar\n󰜉 Reiniciar\n Suspender\n󰿅 Sair" | tofi
     --padding-left 2% \
     --prompt-text "" \
     --placeholder-text "Power-menu:" \
-    --placeholder-color "$color3" \
     --text-cursor false \
-    --border-color "$color1" \
-    --selection-background "$color1" \
+    --selection-background "$color4" \
     --selection-background-padding "0, 7" \
     --selection-color "$background" \
     --result-spacing 5 \
