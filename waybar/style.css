@@ -12,29 +12,31 @@ window#waybar {
 }
 
 .modules-left {
+    border-radius: 5px;
     padding-right: 4px;
-    background-color: @foreground;
-    border-radius: 10px;
+    background-color: @background;
+    border: solid 1px @color8;
 }
 
 #workspaces button {
     transition: none;
     padding: 0px;
-    color: @color7;
+    color: @color8;
 }
 
 #workspaces button.focused {
-    color: @background;
+    color: @color7;
 }
 
 #workspaces button.current_output {
-   color: @background;
+   color: @color7;
 }
 
 .modules-center {
-    border-radius: 10px;
-    background-color: @color8;
+    border-radius: 5px;
+    background-color: @background;
     padding: 0 5px;
+    border: solid 1px @color8;
 }
 
 #custom-prev, #custom-next {
@@ -44,9 +46,10 @@ window#waybar {
 }
 
 .modules-right {
-    border-radius: 10px;
-    background-color: @color8;
+    border-radius: 5px;
+    background-color: @background;
     padding: 0 5px;
+    border: solid 1px @color8;
 }
 
 #privacy {
