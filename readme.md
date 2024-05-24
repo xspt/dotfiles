@@ -13,4 +13,5 @@ This script will create symbolic links to your `~/.config` directory (except for
 
 ## images
 
-![neovim](image.png)
+![neovim](nvim.png)
+![powermenu](powermenu.png)
