@@ -1,9 +1,10 @@
 include "$HOME/.cache/wal/colors-sway"
 
-output * bg $background solid_color
+# output * bg $background solid_color
+output * bg "$HOME/Imagens/katana zero rooftop.jpg" fit $background
 
 gaps inner 0
-gaps outer 10
+gaps outer 5
 
 font "Mononoki Nerd Font" 11
 
