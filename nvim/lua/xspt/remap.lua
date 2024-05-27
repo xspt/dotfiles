@@ -27,10 +27,6 @@ keyset("n", "<leader>Y", "\"+Y")
 keyset("n", "<leader>d", "\"_d")
 keyset("v", "<leader>d", "\"_d")
 
--- disables Q default bind
-keyset("n", "Q", "<nop>")
-keyset("n", "q", "<nop>")
-
 -- substitute in whole document
 keyset("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
