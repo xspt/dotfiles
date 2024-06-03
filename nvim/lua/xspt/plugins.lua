@@ -29,7 +29,6 @@ local plugins = {
    },
    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
    { 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons' } },
-   { 'akinsho/bufferline.nvim', version = '*', dependencies = { 'nvim-tree/nvim-web-devicons' } },
    { 'windwp/nvim-ts-autotag', config = true },
    { 'numToStr/Comment.nvim', config = true },
    {
