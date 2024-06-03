@@ -62,6 +62,14 @@
       ]
    },
 
+   "network": {
+      "tooltip": false,
+      // "interface": "wlan0",
+      "format-wifi": "󰖩 {essid}",
+      "format-ethernet": "󰈀 {ifname}",
+      "format-disconnected": " offline",
+   },
+
    "pulseaudio": {
       "tooltip": false,
       "scroll-step": 2.0,

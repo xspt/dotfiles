@@ -41,7 +41,7 @@ window#waybar {
 
 #custom-prev, #custom-next {
    font-size: 15px;
-   color: @color4;
+   color: @color6;
    padding: 0 5px;
 }
 
@@ -54,24 +54,33 @@ window#waybar {
 
 #privacy {
    padding: 0 5px;
-   color: @color4;
+   color: @color2;
 }
 
 #pulseaudio {
     padding: 0 5px;
-    color: @color2;
+    color: @color5;
 }
 
 #pulseaudio.muted {
     color: @color1;
 }
 
+#network {
+   padding: 0 5px;
+   color: @color3;
+}
+
+#network.disconnected {
+   color: @color1;
+}
+
 #custom-weather {
     padding: 0 5px;
-    color: @color3;
+    color: @color4;
 }
 
 #clock {
     padding: 0 5px;
-    color: @color5;
+    color: @color6;
 }
