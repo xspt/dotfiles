@@ -49,9 +49,6 @@ keyset("n", "<A-l>", ":vertical resize +2<CR>")
 keyset("v", ">", ">gv")
 keyset("v", "<", "<gv")
 
--- open oil.nvim in floating mode
-keyset("n", "<leader>e", ":Oil --float<CR>")
-
 -- buffers
 keyset("n", "<leader><S-h>", ":bp<CR>")
 keyset("n", "<leader><S-l>", ":bn<CR>")
