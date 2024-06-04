@@ -28,7 +28,7 @@ local plugins = {
       dependencies = { 'nvim-lua/plenary.nvim' }
    },
    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
-   { 'nvim-tree/nvim-tree.lua', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+   { 'stevearc/oil.nvim', opts = {}, dependencies = { "nvim-tree/nvim-web-devicons" } },
    { 'windwp/nvim-ts-autotag', config = true },
    { 'numToStr/Comment.nvim', config = true },
    {

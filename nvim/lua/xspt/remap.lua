@@ -49,8 +49,8 @@ keyset("n", "<A-l>", ":vertical resize +2<CR>")
 keyset("v", ">", ">gv")
 keyset("v", "<", "<gv")
 
--- file tree toggling
-keyset("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- open oil.nvim in floating mode
+keyset("n", "<leader>e", ":Oil --float<CR>")
 
 -- buffers
 keyset("n", "<leader><S-h>", ":bp<CR>")
