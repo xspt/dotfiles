@@ -1,31 +1,31 @@
 @import "/home/xspt/.cache/wal/waybar.css";
 
 * {
-    font-family: "Cousine Nerd Font", monospace;
-    font-size: 13px;
+   font-family: "Cousine Nerd Font", monospace;
+   font-size: 13px;
 }
 
 window#waybar {
-    padding: 0px;
-    background-color: transparent;
-    color: @foreground;
+   padding: 0px;
+   background-color: @background;
+   color: @foreground;
+   border: solid 1px @color8;
+   border-radius: 5px;
 }
 
 .modules-left {
-    border-radius: 5px;
-    padding-right: 4px;
-    background-color: @background;
-    border: solid 1px @color8;
+   margin: 1px;
+   background-color: @background;
 }
 
 #workspaces button {
-    transition: none;
-    padding: 0px;
-    color: @color8;
+   transition: none;
+   padding: 0px;
+   color: @color8;
 }
 
 #workspaces button.focused {
-    color: @color7;
+   color: @color7;
 }
 
 #workspaces button.current_output {
@@ -33,10 +33,8 @@ window#waybar {
 }
 
 .modules-center {
-    border-radius: 5px;
-    background-color: @background;
-    padding: 0 5px;
-    border: solid 1px @color8;
+   padding: 1px 5px;
+   margin: 3px;
 }
 
 #custom-prev, #custom-next {
@@ -46,41 +44,54 @@ window#waybar {
 }
 
 .modules-right {
-    border-radius: 5px;
-    background-color: @background;
-    padding: 0 5px;
-    border: solid 1px @color8;
+   margin: 3px;
+   margin-right: 10px;
 }
 
 #privacy {
+   color: @color7;
    padding: 0 5px;
-   color: @color2;
+   border-bottom: solid 1px @color7;
+   margin-right: 5px;
 }
 
 #pulseaudio {
-    padding: 0 5px;
-    color: @color5;
+   color: @color5;
+   padding: 0 5px;
+   border-bottom: solid 1px @color5;
+   margin-right: 5px;
 }
 
 #pulseaudio.muted {
-    color: @color1;
+   color: @color1;
+   padding: 0 5px;
+   border-bottom: solid 1px @color1;
+   margin-right: 5px;
 }
 
 #network {
-   padding: 0 5px;
    color: @color3;
+   padding: 0 5px;
+   border-bottom: solid 1px @color3;
+   margin-right: 5px;
 }
 
 #network.disconnected {
    color: @color1;
+   padding: 0 5px;
+   border-bottom: solid 1px @color1;
+   margin-right: 5px;
 }
 
 #custom-weather {
-    padding: 0 5px;
-    color: @color4;
+   color: @color4;
+   padding: 0 5px;
+   border-bottom: solid 1px @color4;
+   margin-right: 5px;
 }
 
 #clock {
-    padding: 0 5px;
-    color: @color6;
+   color: @color6;
+   padding: 0 5px;
+   border-bottom: solid 1px @color6;
 }

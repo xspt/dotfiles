@@ -1,6 +1,6 @@
 {
-   "margin": "5px 5px 0",
    "layer": "top",
+   "margin": "5px 5px 0px",
    "include": [
       "~/.config/waybar/modules.json"
    ],
