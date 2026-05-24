@@ -10,6 +10,10 @@ spawn-at-startup "wmname" "LG3D"
 spawn-at-startup "waybar"
 spawn-at-startup "swaybg" "-i" "/home/user/Imagens/bg.jpg" "-m" "stretch"
 
+cursor {
+        xcursor-theme "breeze_cursors"
+        xcursor-size 27
+}
 
 input {
         keyboard {
@@ -31,12 +35,9 @@ output "VGA-1" {
 }
 
 
-workspace "main" {
-        open-on-output "VGA-1"
-}
-workspace "music" {
-        open-on-output "VGA-1"
-}
+workspace "1"
+workspace "2"
+workspace "music"
 
 window-rule {
         match app-id="steam"
