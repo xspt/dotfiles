@@ -52,10 +52,17 @@
                 "format-disconnected": "󰈂 offline",
         },
         "clock": {
-                "tooltip": false,
+                "tooltip": true,
+                "tooltip-format": "<tt><small>{calendar}</small></tt>",
                 "format": " {:%H:%M}",
                 "format-alt": " {:L%a, %d de %b}",
-                "locale": "pt_BR.UTF-8"
+                "locale": "pt_BR.UTF-8",
+                "actions": {
+                        "on-scroll-down": "shift_up",
+                        "on-scroll-up": "shift_down",
+                        "on-click-middle": "shift_reset",
+                        "on-click-right": "mode"
+                }
         },
         "tray": {
                 "icon-size": 18,
