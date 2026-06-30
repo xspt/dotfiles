@@ -12,6 +12,7 @@ Configurações para meu desktop linux
 - fuzzel
 - swaylock
 - swaybg
+- cliphist
 
 ### Outras dependências
 

@@ -9,19 +9,22 @@ environment {
 spawn-at-startup "wmname" "LG3D"
 spawn-at-startup "waybar"
 spawn-at-startup "swaybg" "-i" "/home/user/Imagens/bg.jpg" "-m" "stretch"
+spawn-at-startup "sh" "-c" "wl-paste --type text --watch cliphist store"
+spawn-at-startup "sh" "-c" "wl-paste --type image --watch cliphist store"
 
 cursor {
-        xcursor-theme "breeze_cursors"
-        xcursor-size 27
+        xcursor-size 30
 }
 
 input {
         keyboard {
+                numlock
                 xkb {
                         layout "br"
                 }
         }
         warp-mouse-to-focus
+        focus-follows-mouse
 }
 
 
@@ -34,10 +37,10 @@ output "VGA-1" {
         background-color "#7851a9"
 }
 
-
-workspace "1"
-workspace "2"
-workspace "music"
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
 
 window-rule {
         match app-id="steam"
@@ -76,8 +79,12 @@ window-rule {
 }
 // Open picture-in-picture player as floating by default.
 window-rule {
-        match app-id=r#"LibreWolf$"# title="^Picture-in-Picture$"
+        match app-id="org.mozilla.firefox" title="^Picture-in-Picture$"
         open-floating true
+        default-floating-position x=0 y=0 relative-to="bottom-right"
+        default-window-height { fixed 275; }
+        default-column-width { fixed 490; }
+        open-on-output "HDMI-A-1"
 }
 // Block password manager from screen capture.
 window-rule {
@@ -151,11 +158,11 @@ binds {
         Alt+1 { focus-workspace 1; }
         Alt+2 { focus-workspace 2; }
         Alt+3 { focus-workspace 3; }
-        Alt+4 { focus-workspace "music"; }
+        Alt+4 { focus-workspace 4; }
         Alt+Ctrl+1 { move-column-to-workspace 1; }
         Alt+Ctrl+2 { move-column-to-workspace 2; }
         Alt+Ctrl+3 { move-column-to-workspace 3; }
-        Alt+Ctrl+4 { move-column-to-workspace "music"; }
+        Alt+Ctrl+4 { move-column-to-workspace 4; }
 
         Mod+BracketLeft  { consume-or-expel-window-left; }
         Mod+BracketRight { consume-or-expel-window-right; }
@@ -186,4 +193,11 @@ binds {
         Alt+Q { spawn "sh" "-c" "~/.config/niri/powermenu.sh"; }
 
         Mod+P { power-off-monitors; }
+
+        Mod+V {
+                spawn "sh" "-c" \
+                "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
+        }
+
+        Mod+Q { toggle-overview; }
 }
