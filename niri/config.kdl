@@ -8,9 +8,12 @@ environment {
 
 spawn-at-startup "wmname" "LG3D"
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/user/Imagens/bg.jpg" "-m" "stretch"
-spawn-at-startup "sh" "-c" "wl-paste --type text --watch cliphist store"
-spawn-at-startup "sh" "-c" "wl-paste --type image --watch cliphist store"
+spawn-at-startup "blueman-applet"
+
+spawn-sh-at-startup "~/.config/niri/outputs.sh"
+spawn-sh-at-startup "swaybg -i ~/Imagens/bg.jpg -m stretch"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
 
 cursor {
         xcursor-size 30
@@ -27,15 +30,6 @@ input {
         focus-follows-mouse
 }
 
-
-output "HDMI-A-1" {
-        position x=0 y=0
-        background-color "#7851a9"
-}
-output "VGA-1" {
-        position x=0 y=768
-        background-color "#7851a9"
-}
 
 window-rule {
     geometry-corner-radius 10
@@ -121,7 +115,7 @@ binds {
 
         Mod+Return { spawn "foot"; }
         Mod+Space { spawn "fuzzel"; }
-        Super+D { spawn "swaylock" "-C" "/home/user/.cache/wal/swaylock"; }
+        Super+D { spawn-sh "swaylock -C ~/.cache/wal/swaylock"; }
 
         Mod+W { close-window; }
 
@@ -175,6 +169,7 @@ binds {
         Mod+Ctrl+R { reset-window-height; }
         Mod+F { maximize-column; }
         Mod+Shift+F { fullscreen-window; }
+        Mod+M { maximize-window-to-edges; }
         Mod+C { center-column; }
 
         Mod+Minus { set-column-width "-10%"; }
@@ -190,7 +185,7 @@ binds {
         Mod+Print { screenshot-screen; }
         Alt+Print { screenshot-window; }
 
-        Alt+Q { spawn "sh" "-c" "~/.config/niri/powermenu.sh"; }
+        Alt+Q { spawn-sh "~/.config/niri/powermenu.sh"; }
 
         Mod+P { power-off-monitors; }
 
@@ -200,4 +195,5 @@ binds {
         }
 
         Mod+Q { toggle-overview; }
+        Mod+4 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r '.[] | select(.app_id == \"com.github.th-ch.youtube-music\") | .id')\""; }
 }
