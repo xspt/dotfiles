@@ -195,5 +195,8 @@ binds {
         }
 
         Mod+Q { toggle-overview; }
-        Mod+4 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r '.[] | select(.app_id == \"com.github.th-ch.youtube-music\") | .id')\""; }
+
+        Mod+1 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.app_id == \"org.mozilla.firefox\") | .id)')\""; }
+        Mod+2 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.title | contains(\"Discord\")) | .id)')\""; }
+        Mod+4 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.app_id == \"com.github.th-ch.youtube-music\") | .id)')\""; }
 }
