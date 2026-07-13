@@ -17,6 +17,7 @@
                 "tooltip": false,
                 "on-click": "playerctl -p $MUSIC_PLAYER play-pause",
                 "format": "{}",
+                "escape": true,
         },
         "custom/next": {
                 "tooltip": false,
