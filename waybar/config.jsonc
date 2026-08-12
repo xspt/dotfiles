@@ -17,7 +17,6 @@
                 "privacy",
                 "tray",
                 "pulseaudio",
-                "network",
                 "clock",
         ],
 }

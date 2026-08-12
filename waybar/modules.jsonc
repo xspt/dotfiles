@@ -47,11 +47,6 @@
                         "default": ["󰕿", "󰖀", "󰕾"],
                 },
         },
-        "network": {
-                "tooltip": false,
-                "format-ethernet": "󰈁 {ifname}",
-                "format-disconnected": "󰈂 offline",
-        },
         "clock": {
                 "tooltip": true,
                 "tooltip-format": "<tt><small>{calendar}</small></tt>",
