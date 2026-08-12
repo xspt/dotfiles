@@ -1,0 +1,47 @@
+// open-maximized windows
+window-rule {
+        match app-id="steam"
+        match app-id="jetbrains-idea"
+        match app-id="gimp-3.0"
+        match app-id="com.github.th-ch.youtube-music"
+        open-maximized true
+}
+
+// Open picture-in-picture player as floating by default.
+window-rule {
+        match app-id="org.mozilla.firefox" title="^Picture-in-Picture$"
+        open-floating true
+        default-floating-position x=0 y=0 relative-to="bottom-right"
+        default-window-height { fixed 275; }
+        default-column-width { fixed 490; }
+        open-on-output "HDMI-A-1"
+}
+
+
+// Block password manager from screen capture.
+window-rule {
+        match app-id="KeePassXC"
+        block-out-from "screen-capture"
+        open-maximized true
+}
+
+
+// Steam
+window-rule {
+        match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+        default-floating-position x=8 y=8 relative-to="bottom-right"
+        open-floating true
+        open-focused false
+}
+window-rule {
+        match app-id="steam" title="Friends List"
+        default-column-width { fixed 300; }
+        open-maximized false
+}
+window-rule {
+        match app-id="steam" title=r#".+"#
+        exclude title="^Friends List$"
+        exclude title="^Steam$"
+        open-maximized false
+}
+

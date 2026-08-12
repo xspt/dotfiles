@@ -13,6 +13,9 @@ Configurações para meu desktop linux
 - swaylock
 - swaybg
 - cliphist
+- grim
+- slurp
+- swappy
 
 ### Outras dependências
 
@@ -29,3 +32,5 @@ Configurações para meu desktop linux
 - pywal
 - neovim
 - playerctl
+- nm_applet
+- blueman

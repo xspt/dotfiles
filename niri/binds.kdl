@@ -1,0 +1,95 @@
+binds {
+        Mod+Slash { show-hotkey-overlay; }
+
+        // Applications
+        Mod+Return { spawn "foot"; }
+        Mod+Space { spawn "fuzzel"; }
+
+        Alt+Q { spawn-sh "~/.config/niri/powermenu.sh"; }
+        Super+D { spawn-sh "swaylock -C ~/.cache/wal/swaylock"; }
+        Mod+P { power-off-monitors; }
+
+        // Window focus
+        Mod+H { focus-column-left; }
+        Mod+J { focus-window-down; }
+        Mod+K { focus-window-up; }
+        Mod+L { focus-column-right; }
+        Mod+Home { focus-column-first; }
+        Mod+End { focus-column-last; }
+
+        // Window movement
+        Mod+Ctrl+H { move-column-left; }
+        Mod+Ctrl+J { move-window-down; }
+        Mod+Ctrl+K { move-window-up; }
+        Mod+Ctrl+L { move-column-right; }
+        Mod+Ctrl+Home { move-column-to-first; }
+        Mod+Ctrl+End { move-column-to-last; }
+
+        // Monitor focus
+        Alt+H { focus-monitor-left; }
+        Alt+J { focus-monitor-down; }
+        Alt+K { focus-monitor-up; }
+        Alt+L { focus-monitor-right; }
+
+        // Move columns between monitors
+        Alt+Ctrl+H { move-column-to-monitor-left; }
+        Alt+Ctrl+J { move-column-to-monitor-down; }
+        Alt+Ctrl+K { move-column-to-monitor-up; }
+        Alt+Ctrl+L { move-column-to-monitor-right; }
+
+        // Workspace focus
+        Alt+U { focus-workspace-down; }
+        Alt+I { focus-workspace-up; }
+        Alt+1 { focus-workspace 1; }
+        Alt+2 { focus-workspace 2; }
+        Alt+3 { focus-workspace 3; }
+        Alt+4 { focus-workspace 4; }
+
+        // Move columns between workspaces
+        Alt+Ctrl+U { move-column-to-workspace-down; }
+        Alt+Ctrl+I { move-column-to-workspace-up; }
+        Alt+Ctrl+1 { move-column-to-workspace 1; }
+        Alt+Ctrl+2 { move-column-to-workspace 2; }
+        Alt+Ctrl+3 { move-column-to-workspace 3; }
+        Alt+Ctrl+4 { move-column-to-workspace 4; }
+
+        // Column / window grouping
+        Mod+BracketLeft { consume-or-expel-window-left; }
+        Mod+BracketRight { consume-or-expel-window-right; }
+        Mod+Comma { consume-window-into-column; }
+        Mod+Period { expel-window-from-column; }
+
+        // Window sizing
+        Mod+R { switch-preset-column-width; }
+        Mod+Shift+R { switch-preset-window-height; }
+        Mod+Ctrl+R { reset-window-height; }
+        Mod+Minus { set-column-width "-10%"; }
+        Mod+Equal { set-column-width "+10%"; }
+        Mod+Shift+Minus { set-window-height "-10%"; }
+        Mod+Shift+Equal { set-window-height "+10%"; }
+
+        // Window layout
+        Mod+F { maximize-column; }
+        Mod+Shift+F { fullscreen-window; }
+        Mod+M { maximize-window-to-edges; }
+        Mod+C { center-column; }
+        Mod+S { toggle-window-floating; }
+
+        // Window actions
+        Mod+W { close-window; }
+        Mod+Q { toggle-overview; }
+
+        // Screenshots
+        Print { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
+        Mod+Shift+S { screenshot; }
+        Mod+Print { screenshot-screen; }
+        Alt+Print { screenshot-window; }
+
+        // Clipboard
+        Mod+V { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+
+        // Application shortcuts
+        Mod+1 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.app_id == \"org.mozilla.firefox\") | .id)')\""; }
+        Mod+2 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.title | contains(\"Discord\")) | .id)')\""; }
+        Mod+4 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.app_id == \"com.github.th-ch.youtube-music\") | .id)')\""; }
+}

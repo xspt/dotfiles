@@ -1,22 +1,12 @@
+include "startup.kdl"
+include "rules.kdl"
+include "binds.kdl"
+
 prefer-no-csd
 screenshot-path null
-environment {
-        _JAVA_AWT_WM_NONREPARENTING "1"
-        MUSIC_PLAYER "chromium"
-}
 
-
-spawn-at-startup "wmname" "LG3D"
-spawn-at-startup "waybar"
-spawn-at-startup "blueman-applet"
-
-spawn-sh-at-startup "~/.config/niri/outputs.sh"
-spawn-sh-at-startup "swaybg -i ~/Imagens/bg.jpg -m stretch"
-spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
-spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
-
-cursor {
-        xcursor-size 30
+hotkey-overlay {
+        skip-at-startup
 }
 
 input {
@@ -30,61 +20,18 @@ input {
         focus-follows-mouse
 }
 
+cursor {
+        xcursor-size 30
+}
 
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
 }
 
-window-rule {
-        match app-id="steam"
-        open-maximized true
-}
-window-rule {
-        match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
-        default-floating-position x=8 y=8 relative-to="bottom-right"
-        open-floating true
-        open-focused false
-}
-window-rule {
-        match app-id="steam" title="Friends List"
-        default-column-width { fixed 300; }
-        open-maximized false
-}
-window-rule {
-        match app-id="steam" title=r#".+"#
-        exclude title="^Friends List$"
-        exclude title="^Steam$"
-        open-maximized false
-}
-
-window-rule {
-        match app-id="com.github.th_ch.youtube_music"
-        open-on-workspace "music"
-        open-maximized true
-}
-window-rule {
-        match app-id="jetbrains-idea"
-        open-maximized true
-}
-window-rule {
-        match app-id="gimp-3.0"
-        open-maximized true
-}
-// Open picture-in-picture player as floating by default.
-window-rule {
-        match app-id="org.mozilla.firefox" title="^Picture-in-Picture$"
-        open-floating true
-        default-floating-position x=0 y=0 relative-to="bottom-right"
-        default-window-height { fixed 275; }
-        default-column-width { fixed 490; }
-        open-on-output "HDMI-A-1"
-}
-// Block password manager from screen capture.
-window-rule {
-        match app-id="KeePassXC"
-        block-out-from "screen-capture"
-        open-maximized true
+layer-rule {
+        match namespace="^wallpaper$"
+        place-within-backdrop true
 }
 
 
@@ -103,100 +50,6 @@ layout {
                 active-color "#D0D0D0"
                 inactive-color "#151515"
         }
-}
 
-hotkey-overlay {
-        skip-at-startup
-}
-
-
-binds {
-        Mod+Slash { show-hotkey-overlay; }
-
-        Mod+Return { spawn "foot"; }
-        Mod+Space { spawn "fuzzel"; }
-        Super+D { spawn-sh "swaylock -C ~/.cache/wal/swaylock"; }
-
-        Mod+W { close-window; }
-
-        Mod+H     { focus-column-left; }
-        Mod+J     { focus-window-down; }
-        Mod+K     { focus-window-up; }
-        Mod+L     { focus-column-right; }
-
-        Mod+Ctrl+H     { move-column-left; }
-        Mod+Ctrl+J     { move-window-down; }
-        Mod+Ctrl+K     { move-window-up; }
-        Mod+Ctrl+L     { move-column-right; }
-
-        Mod+Home { focus-column-first; }
-        Mod+End  { focus-column-last; }
-        Mod+Ctrl+Home { move-column-to-first; }
-        Mod+Ctrl+End  { move-column-to-last; }
-
-        Alt+H     { focus-monitor-left; }
-        Alt+J     { focus-monitor-down; }
-        Alt+K     { focus-monitor-up; }
-        Alt+L     { focus-monitor-right; }
-
-        Alt+Ctrl+H     { move-column-to-monitor-left; }
-        Alt+Ctrl+J     { move-column-to-monitor-down; }
-        Alt+Ctrl+K     { move-column-to-monitor-up; }
-        Alt+Ctrl+L     { move-column-to-monitor-right; }
-
-        Alt+U              { focus-workspace-down; }
-        Alt+I              { focus-workspace-up; }
-        Alt+Ctrl+U         { move-column-to-workspace-down; }
-        Alt+Ctrl+I         { move-column-to-workspace-up; }
-
-        Alt+1 { focus-workspace 1; }
-        Alt+2 { focus-workspace 2; }
-        Alt+3 { focus-workspace 3; }
-        Alt+4 { focus-workspace 4; }
-        Alt+Ctrl+1 { move-column-to-workspace 1; }
-        Alt+Ctrl+2 { move-column-to-workspace 2; }
-        Alt+Ctrl+3 { move-column-to-workspace 3; }
-        Alt+Ctrl+4 { move-column-to-workspace 4; }
-
-        Mod+BracketLeft  { consume-or-expel-window-left; }
-        Mod+BracketRight { consume-or-expel-window-right; }
-
-        Mod+Comma  { consume-window-into-column; }
-        Mod+Period { expel-window-from-column; }
-
-        Mod+R { switch-preset-column-width; }
-        Mod+Shift+R { switch-preset-window-height; }
-        Mod+Ctrl+R { reset-window-height; }
-        Mod+F { maximize-column; }
-        Mod+Shift+F { fullscreen-window; }
-        Mod+M { maximize-window-to-edges; }
-        Mod+C { center-column; }
-
-        Mod+Minus { set-column-width "-10%"; }
-        Mod+Equal { set-column-width "+10%"; }
-
-        Mod+Shift+Minus { set-window-height "-10%"; }
-        Mod+Shift+Equal { set-window-height "+10%"; }
-
-        Mod+S       { toggle-window-floating; }
-
-        Print { screenshot; }
-        Mod+Shift+S { screenshot; }
-        Mod+Print { screenshot-screen; }
-        Alt+Print { screenshot-window; }
-
-        Alt+Q { spawn-sh "~/.config/niri/powermenu.sh"; }
-
-        Mod+P { power-off-monitors; }
-
-        Mod+V {
-                spawn "sh" "-c" \
-                "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
-        }
-
-        Mod+Q { toggle-overview; }
-
-        Mod+1 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.app_id == \"org.mozilla.firefox\") | .id)')\""; }
-        Mod+2 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.title | contains(\"Discord\")) | .id)')\""; }
-        Mod+4 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.app_id == \"com.github.th-ch.youtube-music\") | .id)')\""; }
+        background-color "transparent"
 }

@@ -1,0 +1,12 @@
+environment {
+        _JAVA_AWT_WM_NONREPARENTING "1"
+        MUSIC_PLAYER "chromium"
+}
+
+spawn-at-startup "wmname" "LG3D"
+spawn-at-startup "waybar"
+
+spawn-sh-at-startup "~/.config/niri/outputs.sh"
+spawn-sh-at-startup "swaybg -i ~/Imagens/bg.jpg -m stretch"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
