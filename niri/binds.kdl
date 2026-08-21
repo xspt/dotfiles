@@ -80,13 +80,14 @@ binds {
         Mod+Q { toggle-overview; }
 
         // Screenshots
-        Print { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
+        Print { screenshot; }
         Mod+Shift+S { screenshot; }
         Mod+Print { screenshot-screen; }
         Alt+Print { screenshot-window; }
 
         // Clipboard
         Mod+V { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+        Mod+Shift+D { spawn-sh "wl-paste --type image/png | swappy -f -"; }
 
         // Application shortcuts
         Mod+1 { spawn-sh "niri msg action focus-window --id \"$(niri msg -j windows | jq -r 'first(.[] | select(.app_id == \"org.mozilla.firefox\") | .id)')\""; }

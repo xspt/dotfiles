@@ -11,7 +11,7 @@ window-rule {
 window-rule {
         match app-id="org.mozilla.firefox" title="^Picture-in-Picture$"
         open-floating true
-        default-floating-position x=0 y=0 relative-to="bottom-right"
+        default-floating-position x=8 y=8 relative-to="bottom-right"
         default-window-height { fixed 275; }
         default-column-width { fixed 490; }
         open-on-output "HDMI-A-1"
